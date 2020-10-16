@@ -15,6 +15,14 @@ PHP variables of similar names prioritize the last assignment
 
 $last_name = 'Waller';
 
+// $car = 'Toyota';
+// echo $car;
+
+$car = ['Toyota', 'Ford','Chevrolet', 'Nissan'];
+$car = array('Toyota', 'Ford','Chevrolet', 'Nissan');
+print_r($car);
+
+
 // echo $first_name. ' ' .$last_name;
 // // echo is PHP for "print"
 // // "." operator is for concatenation (REMINDER: php ignores whitespace)

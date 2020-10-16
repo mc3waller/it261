@@ -1,0 +1,10 @@
+# Ignore these files and file types
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.txt
+practice.php
+.gitattributes.txt
+test_mamp.php

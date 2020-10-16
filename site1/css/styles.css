@@ -71,6 +71,23 @@ aside {
     float: right;
     background-color: pink;
     height: 300px;
+
+    padding: 10px;
+}
+
+#day_list {
+    margin: 0 auto;
+    width: 58%;
+}
+
+#day_list li {
+    float: left;
+    list-style-type: none;
+    text-align: center;
+}
+
+#day_list li a {
+    text-decoration: none;
 }
 
 footer {

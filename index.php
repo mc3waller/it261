@@ -16,8 +16,8 @@
 
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Switch - 3</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="site1/daily.php">Switch - 3</a></li>
                 <li><a href="">Troubleshoot - 4</a></li>
                 <li><a href="">Calculator - 5</a></li>
                 <li><a href="">Email - 6</a></li>
@@ -64,7 +64,10 @@
                 </ul>
                 Week 3
                 <ul>
-                    <li><a href=""></a><em>Coming soon...</em></li>
+                    <li><a href="week3/arrays.php">arrays.php</a></li>
+                    <li><a href="week3/html-page.php">html-page.php</a></li>
+                    <li><a href="week3/if.php">if.php</a></li>
+                    <li><a href="week3/switch.php">switch.php</a></li>
                 </ul>
                 Week 4
                 <ul>

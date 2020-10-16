@@ -1,0 +1,40 @@
+/* .inner {
+    background: darkgray;
+} */
+
+.inner main {
+    padding: 10px;
+    height: auto;
+}
+
+.inner main ul {
+    margin-left: 35px;
+}
+
+.sunday main {
+    background-color: rgb(152, 182, 192);
+}
+
+.monday main {
+    background-color: rgb(214, 181, 138);
+}
+
+.tuesday main {
+    background-color: rgb(160, 160, 160);
+}
+
+.wednsday main {
+    background-color: rgb(88, 163, 138);
+}
+
+.thursday main {
+    background-color: slategray;
+}
+
+.friday main {
+    background-color: rgb(235, 192, 101);
+}
+
+.saturday main {
+    background-color: rgb(214, 118, 150);
+}
