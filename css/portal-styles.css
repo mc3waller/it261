@@ -1,0 +1,162 @@
+/* ============================================================
+PORTAL PAGE CSS
+============================================================ */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: rgb(160, 160, 160);
+    background-image: linear-gradient(to bottom right, rgb(212, 212, 212), rgb(107, 107, 107));
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: auto;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 95%;
+
+    text-shadow: 1px 1px 4px rgb(160, 160, 160);
+}
+
+#logo {
+    width: 190px;
+    margin: 20px 0 15px 0;
+}
+
+.row {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+
+nav {
+    height: 52px;
+    line-height: 50px;
+    background-color: silver;
+    background-image: linear-gradient(to bottom, rgb(195, 195, 195), rgb(156, 156, 156));
+    border: 1px solid rgb(78, 78, 78);
+
+    margin-top: 1%;
+
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+
+    box-shadow: 0 10px 10px -10px rgb(129, 129, 129);
+}
+
+nav ul {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+nav li {
+    float: left;
+    list-style-type: none;
+    text-align: center;
+    width: 14.2%; /* 100 divided by 6 */
+}
+
+nav a {
+    color: darkred;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: darkgray;
+    display: block;
+    background-image: linear-gradient(to bottom, rgb(153, 153, 153), rgb(185, 185, 185));
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+
+a {
+    color: darkred;
+    text-decoration: none;
+}
+
+.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.main {
+    width: 62%;
+    float: left;
+    background-color: silver;
+    margin-bottom: 10px;
+
+    padding: 10px;
+    border: 2px solid rgb(78, 78, 78);
+    border-radius: 3px;
+
+    -moz-box-shadow: 0 0 10px rgb(129, 129, 129);
+    -webkit-box-shadow: 0 0 10px rgb(129, 129, 129);
+    box-shadow: 0 0 10px rgb(129, 129, 129);
+
+    background-image: linear-gradient(to bottom right, rgb(211, 211, 211), rgb(146, 146, 146));
+}
+
+.main ul {
+    margin-left: 35px;
+}
+
+.main ol {
+    margin-left: 35px;
+}
+
+.aside {
+    width: 35%;
+    float: right;
+    background-color: silver;
+    margin-bottom: 10px;
+
+    padding: 10px;
+    border: 2px solid rgb(78, 78, 78);
+    border-radius: 3px;
+
+    -moz-box-shadow: 0 0 10px rgb(129, 129, 129);
+    -webkit-box-shadow: 0 0 10px rgb(129, 129, 129);
+    box-shadow: 0 0 10px rgb(129, 129, 129);
+
+    background-image: linear-gradient(to bottom right, rgb(211, 211, 211), rgb(146, 146, 146));
+}
+
+.aside ul {
+    margin-left: 35px;
+    list-style-type: circle;
+}
+
+.aside ol {
+    margin-left: 35px;
+}
+
+footer {
+    height: 300px;
+    clear: both;
+}
+
+.copyright {
+    height: 50px;
+    line-height: 50px;
+}
+
+.copyright li {
+    float: left;
+    list-style-type: none;
+    margin-right: 30px;
+}
+.copyright a {
+    color: darkred;
+    text-decoration: none;
+}
