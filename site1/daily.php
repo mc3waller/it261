@@ -2,21 +2,17 @@
     include('includes/header.php');
 ?>
 
-<head>
-    <link href="css/daily-styles.css" type="text/css" rel="stylesheet">
-</head>
-
 <div class="wrapper">
     <main style='text-align: center'>
         <h1 style='text-align:center'>Welcome to the <em>Game of the Day</em> page!</h1>
 
         <br><hr><br>
 
-        <h1 style="color: <?php $title_color ?>"> <?php echo $game; ?> </h1>
+        <h1> <?php echo $game; ?> </h1>
 
         <br>
 
-        <img src="images/<?php echo $pic; ?>" alt="<?php echo $alt ?>" height="300px" style='border: 1px solid rgb(78, 78, 78);     box-shadow: 0 10px 10px -10px rgb(129, 129, 129);' />
+        <img src="images/<?php echo $pic; ?>" alt="<?php echo $alt ?>" height="300" style='border: 1px solid rgb(78, 78, 78);     box-shadow: 0 10px 10px -10px rgb(129, 129, 129);' />
 
         <br><br>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <title>Malik's Portal Page</title>
         <link href="css/portal-styles.css" type="text/css" rel="stylesheet">
     </head>
@@ -18,7 +18,7 @@
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="site1/daily.php">Switch - 3</a></li>
-                <li><a href="">Troubleshoot - 4</a></li>
+                <li><a href="week4/troubleshoot.php">Troubleshoot - 4</a></li>
                 <li><a href="">Calculator - 5</a></li>
                 <li><a href="">Email - 6</a></li>
                 <li><a href="">Gallery - 7</a></li>
@@ -71,7 +71,8 @@
                 </ul>
                 Week 4
                 <ul>
-                    <li><a href=""></a><em>Coming soon...</em></li>
+                    <li><a href="week4/form1.php">form1.php</a></li>
+                    <li><a href="week4/form2.php">form2.php</a></li>
                 </ul>
                 Week 5
                 <ul>

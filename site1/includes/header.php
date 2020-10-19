@@ -87,9 +87,10 @@ switch($today) {
 <!doctype html>
 <html lang="en-us">
 <head>
-    <meta charset="uf-8">
+    <meta charset="UTF-8">
     <title> <?php echo $title; ?> </title>
     <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <link href="css/daily-styles.css" type="text/css" rel="stylesheet">
 </head>
 
 <body class="<?php echo $body_class; ?> <?php echo $back_color ?>">
