@@ -35,31 +35,37 @@ switch($today) {
         $coffee = 'Saturday is Regular Joe Day!';
         $pic = 'joe.jpg';
         $alt = 'Regular Joe';
+        $content = 'Regular Joe content in at least one paragrpah.';
     break;
     case 'Sunday' :
         $coffee = 'Sunday is Cappuccino Day!';
         $pic = 'cap.jpg';
         $alt = 'Cappuccino';
+        $content = 'Cappuccino content in at least one paragrpah.';
     break;
     case 'Monday' :
         $coffee = 'Monday is Latte Day!';
         $pic = 'latte.jpg';
         $alt = 'Latte';
+        $content = 'Latte Day content in at least one paragrpah.';
     break;
     case 'Tuesday' :
         $coffee = 'Tuesday is Americano Day!';
         $pic = 'americano.jpg';
         $alt = 'Americano';
+        $content = 'Americano content in at least one paragrpah.';
     break;
     case 'Wednesday' :
         $coffee = 'Wednesday is Cold Brew Day!';
         $pic = 'coldbrew.jpg';
         $alt = 'Cold Brew';
+        $content = 'Cold Brew content in at least one paragrpah.';
     break;
     case 'Thursday' :
         $coffee = 'Thursday is Pumpkin Latte Day!';
         $pic = 'pumpkin.jpg';
         $alt = 'Pumpkin';
+        $content = 'Pumpkin Latte content in at least one paragrpah.';
     break;
 }
 

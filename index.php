@@ -19,7 +19,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="site1/daily.php">Switch - 3</a></li>
                 <li><a href="week4/troubleshoot.php">Troubleshoot - 4</a></li>
-                <li><a href="">Calculator - 5</a></li>
+                <li><a href="week5/trip-calculator.php">Calculator - 5</a></li>
                 <li><a href="">Email - 6</a></li>
                 <li><a href="">Gallery - 7</a></li>
                 <li><a href="">Database - 8</a></li>
@@ -76,7 +76,7 @@
                 </ul>
                 Week 5
                 <ul>
-                    <li><a href=""></a><em>Coming soon...</em></li>
+                    <li><a href="week5/currency-final.php">currency-final.php</a></li>
                 </ul>
                 Week 6
                 <ul>
