@@ -90,9 +90,15 @@ if (isset($_POST['firstName'],
                 $subject = 'Test Email' .date('m/d/y');
                 $body = ''.$firstName.' has filled out your form '.PHP_EOL.'';
                 $body .= 'Email: '.$email.' '.PHP_EOL.'';
+                $body .= 'Gender: '.$gender.' '.PHP_EOL.'';
                 $body .= 'Comments: '.$comments.'';
 
-                mail($to, $subject, $body);
+                $headers = array(
+                    'From' => 'no-reply@mystudentswa.com',
+                    'Reply-to' => ' '.$email.''
+                );
+
+                mail($to, $subject, $body, $headers);
                 header('Location: thx.php');
 
             } // end of isset
@@ -223,8 +229,8 @@ if (isset($_POST['firstName'],
                     <textarea name="comments"><?php if (isset($_POST['comments'])) echo htmlspecialchars($_POST['comments']); ?></textarea>
                         <span><?php echo $commentsErr; ?></span>
 
-                <input type="radio" name="privacy" value="<?php
-                    if (isset($_POST['privacy'])) echo htmlspecialchars($_POST['privacy']); ?>">
+                <input type="radio" name="privacy" value="yes"<?php
+                    if(isset($_POST['privacy']) && $_POST['privacy'] == 'yes') echo 'checked="checked"' ; ?>>
                     I agree to your Privacy Policy
                     <span><?php echo $privacyErr; ?></span>
 

@@ -80,7 +80,7 @@
                 </ul>
                 Week 6
                 <ul>
-                    <li><a href=""></a><em>Coming soon...</em></li>
+                    <li><a href="week6/form-emailable.php">form-emailable.php</a></li>
                 </ul>
                 Week 7
                 <ul>
