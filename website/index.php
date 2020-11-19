@@ -13,7 +13,7 @@ include('includes/header.php');
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa recusandae alias dolores commodi ab nemo suscipit assumenda eligendi, impedit doloremque quasi eum quo beatae cupiditate consectetur corporis eos dicta officia?"
     </blockquote>
 
-    <p class="center"><a href="">Here is my EXTRA CREDIT LINK to my GitHub account showing my randImages function (index.php and config.php)</a></p>
+    <p class="center"><a href="https://github.com/mc3waller/it261/tree/main/website">Here is my EXTRA CREDIT LINK to my GitHub account showing my randImages function (index.php and config.php)</a></p>
 
 <?php
 

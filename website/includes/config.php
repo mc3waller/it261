@@ -84,8 +84,8 @@ $photos[4] = 'photo5';
 // displays a random images from the specified (perameter) collection
 function randImages($photos) {
     $i = rand(0, count($photos)-1);
-    $selectedImages = '../images/'.$photos[$i].'.jpg';
-    echo '<img src="'.$selectedImages.'" alt="'.$i.'">';
+    $selectedImages = 'images/'.$photos[$i].'.png';
+    echo '<img src="'.$selectedImages.'" alt="'.$i.'" style="width:400px">';
 } // end function
 
 ?>
