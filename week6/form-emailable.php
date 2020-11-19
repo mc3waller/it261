@@ -3,7 +3,7 @@
 $firstName = '';
 $lastName = '';
 $email = '';
-// $phone = '';
+$phone = '';
 $gender = '';
 $wines = '';
 $privacy = '';
@@ -12,7 +12,7 @@ $comments = '';
 $firstNameErr = '';
 $lastNameErr = '';
 $emailErr = '';
-// $phoneErr = '';
+$phoneErr = '';
 $genderErr = '';
 $winesErr = '';
 $privacyErr = '';
@@ -79,17 +79,44 @@ if (empty($_POST['privacy'])) {
     $privacy = $_POST['privacy'];
 }
 
+// if the end user checks the checkboxes, we want to know
+// implode the array of wines - create a function for it
+
+function myWines() {
+    $myReturn = '';
+
+    if (!empty($_POST['wines'])) {
+        $myReturn = implode(', ', $_POST['wines']);
+
+
+    } return $myReturn; // end if
+
+} // end function
+
+if (empty($_POST['phone'])) {  // if empty, type in your number
+    $phoneErr = 'Your phone number please!';
+} elseif(array_key_exists('phone', $_POST)) {
+    if (!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) { // if you are not typing the requested format of xxx-xxx-xxxx, display Invalid format
+        $phoneErr = 'Invalid format!';
+    } else {
+        $phone = $_POST['phone'];
+    }
+}    
+
 if (isset($_POST['firstName'],
             $_POST['lastName'],
             $_POST['gender'],
             $_POST['wines'],
             $_POST['comments'],
+            $_POST['phone'],
             $_POST['privacy'])) {
 
                 $to = 'mc3waller@hotmail.com';
                 $subject = 'Test Email' .date('m/d/y');
                 $body = ''.$firstName.' has filled out your form '.PHP_EOL.'';
                 $body .= 'Email: '.$email.' '.PHP_EOL.'';
+                $body .= 'Your phone number: '.$phone.' '.PHP_EOL.'';
+                $body .= 'Your Wines: '.myWines().' '.PHP_EOL.'';
                 $body .= 'Gender: '.$gender.' '.PHP_EOL.'';
                 $body .= 'Comments: '.$comments.'';
 
@@ -192,6 +219,12 @@ if (isset($_POST['firstName'],
                         if (isset($_POST['email'])) echo htmlspecialchars($_POST['email']); ?>"> 
                         <!-- If the end user has typed an email, use that email -->
                         <span><?php echo $emailErr; ?></span>
+
+                <label>Phone</label>
+                    <input type="text" name="phone" placeholder="xxx-xxx-xxxx" value="<?php
+                        if (isset($_POST['phone'])) echo htmlspecialchars($_POST['phone']); ?>"> 
+                        <!-- If the end user has typed a phone number, use that phone number -->
+                        <span><?php echo $phoneErr; ?></span>
 
                 <label>Gender</label>
                     <ul>
