@@ -39,7 +39,7 @@ switch(THIS_PAGE) {
 
     case 'contact.php' : 
         $title = 'Contact';
-        $mainHeadline = 'Contact Us';
+        $mainHeadline = 'Contact Us!';
         $body = 'contact inner';
     break;
 
@@ -51,8 +51,7 @@ switch(THIS_PAGE) {
 
     case 'gallery.php' : 
         $title = 'Gallery';
-        $mainHeadline = 'Welcome to the Gallery!';
-        $center = 'center';
+        $mainHeadline = 'Welcome to the Candidates Gallery Page!';
         $body = 'gallery inner';
     break;
 
@@ -104,6 +103,47 @@ function randImages($photos) {
 
 
 /* ========================================
+CANDIDATES LIST PHP
+=========================================== */
+
+$people['Donald_Trump'] = 'trump_President from NY';
+$people['Joe_Biden'] = 'biden_Vice President from PA';
+$people['Hilary_Clinton'] = 'clint_Secretary from NY';
+$people['Bernie_Sanders'] = 'sande_Senator from VT';
+$people['Elizabeth_Warren'] = 'warre_Senator from MA';
+$people['Kamala_Harris'] = 'harri_Senator from CA';
+$people['Corey_Booker'] = 'booke_Senator from NJ';
+$people['Andrew_Yang'] = 'ayang_Entrepreneur from NY';
+$people['Pete_Buttigieg'] = 'butti_Mayor from IN';
+$people['Amy_Klobuchar'] = 'klobu_Senator from MN';
+$people['Julian_Castro'] = 'castr_Housing/Urban from TX';
+
+/* ========================================
+RANDOM IMAGE (CANDIDATES)
+=========================================== */
+
+// photos array for the randImages() function
+$candidates[0] = 'trump';
+$candidates[1] = 'biden';
+$candidates[2] = 'clint';
+$candidates[3] = 'sande';
+$candidates[4] = 'warre';
+$candidates[5] = 'harri';
+$candidates[6] = 'booke';
+$candidates[7] = 'ayang';
+$candidates[8] = 'butti';
+$candidates[9] = 'klobu';
+$candidates[10] = 'castr';
+
+// displays a random images from the specified (perameter) collection
+function randImages2($candidates) {
+    $i = rand(0, count($candidates)-1);
+    $selectedImages = 'images/'.$candidates[$i].'.jpg';
+    echo '<img src="'.$selectedImages.'" alt="'.$i.'" style="width:300px">';
+} // end function
+
+
+/* ========================================
 FORM PHP
 =========================================== */
 
@@ -111,8 +151,8 @@ $firstName = '';
 $lastName = '';
 $email = '';
 $phone = '';
-$gender = '';
-$wines = '';
+$newsletter = '';
+$donuts = '';
 $privacy = '';
 $comments = '';
 
@@ -120,8 +160,8 @@ $firstNameErr = '';
 $lastNameErr = '';
 $emailErr = '';
 $phoneErr = '';
-$genderErr = '';
-$winesErr = '';
+$newsletterErr = '';
+$donutsErr = '';
 $privacyErr = '';
 $commentsErr = '';
 
@@ -149,33 +189,20 @@ if (empty($_POST['email'])) {
     $email = $_POST['email'];
 }
 
-// if (empty($_POST['phone'])) {
-//     $phoneErr = 'Please enter a phone number';
-// } else {
-//     $phone = $_POST['phone'];
-// }
-
-if (empty($_POST['gender'])) {
-    $genderErr = 'Please check one';
+if (empty($_POST['newsletter'])) {
+    $newsletterErr = 'Please choose an option';
 } else {
-    $gender = $_POST['gender'];
+    $newsletter = $_POST['newsletter'];
 }
 
-// If gender = male, then male is 'checked'
-if ($gender == 'male') {
-    $male = 'checked';
-} elseif ($gender == 'female') {
-    $female = 'checked';
-}
-
-if (empty($_POST['wines'])) {
-    $winesErr = 'What, no wines?';
+if (empty($_POST['donuts'])) {
+    $donutsErr = 'You got a problem with donuts?';
 } else {
-    $wines = $_POST['wines'];
+    $donuts = $_POST['donuts'];
 }
 
 if (empty($_POST['comments'])) {
-    $commentsErr = 'Please include your comments';
+    $commentsErr = 'Please provide your feedback';
 } else {
     $comments = $_POST['comments'];
 }
@@ -187,13 +214,13 @@ if (empty($_POST['privacy'])) {
 }
 
 // if the end user checks the checkboxes, we want to know
-// implode the array of wines - create a function for it
+// implode the array of donuts - create a function for it
 
-function myWines() {
+function myDonuts() {
     $myReturn = '';
 
-    if (!empty($_POST['wines'])) {
-        $myReturn = implode(', ', $_POST['wines']);
+    if (!empty($_POST['donuts'])) {
+        $myReturn = implode(', ', $_POST['donuts']);
 
 
     } return $myReturn; // end if
@@ -201,10 +228,10 @@ function myWines() {
 } // end function
 
 if (empty($_POST['phone'])) {  // if empty, type in your number
-    $phoneErr = 'Your phone number please!';
+    $phoneErr = 'Please enter your phone number';
 } elseif(array_key_exists('phone', $_POST)) {
-    if (!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) { // if you are not typing the requested format of xxx-xxx-xxxx, display Invalid format
-        $phoneErr = 'Invalid format!';
+    if (!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) { // if you are not typing the requested format of xxx-xxx-xxxx, display "invalid format"
+        $phoneErr = 'Invalid format';
     } else {
         $phone = $_POST['phone'];
     }
@@ -212,19 +239,19 @@ if (empty($_POST['phone'])) {  // if empty, type in your number
 
 if (isset($_POST['firstName'],
             $_POST['lastName'],
-            $_POST['gender'],
-            $_POST['wines'],
+            $_POST['newsletter'],
+            $_POST['donuts'],
             $_POST['comments'],
             $_POST['phone'],
             $_POST['privacy'])) {
 
                 $to = 'mc3waller@hotmail.com';
                 $subject = 'Test Email' .date('m/d/y');
-                $body = ''.$firstName.' has filled out your form '.PHP_EOL.'';
+                $body = ''.$firstName.' has filled out your contact form! '.PHP_EOL.'';
                 $body .= 'Email: '.$email.' '.PHP_EOL.'';
-                $body .= 'Your phone number: '.$phone.' '.PHP_EOL.'';
-                $body .= 'Your Wines: '.myWines().' '.PHP_EOL.'';
-                $body .= 'Gender: '.$gender.' '.PHP_EOL.'';
+                $body .= 'Phone number: '.$phone.' '.PHP_EOL.'';
+                $body .= 'Favorite donuts: '.myDonuts().' '.PHP_EOL.'';
+                $body .= 'Newsletter: '.$newsletter.' '.PHP_EOL.'';
                 $body .= 'Comments: '.$comments.'';
 
                 $headers = array(

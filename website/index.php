@@ -7,7 +7,7 @@ include('includes/header.php');
 
 <div id="wrapper">
     <h1 class="center" <?php $center; ?>><?php echo $mainHeadline; ?></h1>
-    <p class="center"><?php echo randImages($photos); ?></p>
+    <?php echo randImages($photos); ?>
 
     <blockquote>
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa recusandae alias dolores commodi ab nemo suscipit assumenda eligendi, impedit doloremque quasi eum quo beatae cupiditate consectetur corporis eos dicta officia?"

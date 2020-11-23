@@ -9,7 +9,7 @@ GENERAL CSS
 }
 
 .active {
-    color: #f00;
+    color: grey;
 }
 
 .home {
@@ -26,7 +26,7 @@ GENERAL CSS
 
 header {
     margin-bottom: 20px;
-    background: orange;
+    background: tan;
     overflow: hidden;
     padding-bottom: 20px;
 }
@@ -52,6 +52,11 @@ nav li {
     list-style-type: none;
 }
 
+nav a {
+    color: brown;
+    text-decoration: none;
+}
+
 #wrapper {
     clear: both;
     width: 940px;
@@ -65,8 +70,12 @@ main {
 
 aside {
     width: 340px;
+    margin-top: 15px;
     float: right;
-    background: lightblue;
+}
+
+aside img {
+    margin: 10px auto 15px auto;
 }
 
 footer {
@@ -84,6 +93,12 @@ footer li {
 
 img {
     max-width: 100%;
+    display: block;
+}
+
+/* Random home page image */
+#wrapper img {
+    margin: 0 auto;
 }
 
 blockquote {
@@ -101,6 +116,26 @@ h1 {
     font-size: 2em;
     font-weight: 200;
     margin-bottom: 9px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+table {
+    border: 1px solid tan;
+    width: 580px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.candidates td:nth-child(1),
+.candidates td:nth-child(2) {
+    width: 150px;
+}
+
+.candidates td:nth-child(2) {
+    padding-left: 20px;
 }
 
 

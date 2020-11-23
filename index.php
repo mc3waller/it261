@@ -20,7 +20,7 @@
                 <li><a href="site1/daily.php">Switch - 3</a></li>
                 <li><a href="week4/troubleshoot.php">Troubleshoot - 4</a></li>
                 <li><a href="week5/trip-calculator.php">Calculator - 5</a></li>
-                <li><a href="week6/form-emailable.php">Email - 6</a></li>
+                <li><a href="website/contact.php">Email - 6</a></li>
                 <li><a href="">Gallery - 7</a></li>
                 <li><a href="">Database - 8</a></li>
                 <!-- <li><a href="">Database - 8</a></li> -->
@@ -80,13 +80,16 @@
                 </ul>
                 Week 6
                 <ul>
+                    <li><a href="week6/form-emailable.php">form-emailable.php</a></li>
+                    <li><a href="week6/functions.php">functions.php</a></li>
+                    <li><a href="week6/random-count.php">random-count.php</a></li>
                     <li><a href="website/index.php">website/index.php</a></li>
                     <li><a href="website/contact.php">website/contact.php</a></li>
                     <li><a href="website/thx.php">website/thx.php</a></li>
                 </ul>
                 Week 7
                 <ul>
-                    <li><a href=""></a><em>Coming soon...</em></li>
+                    <li><a href="week7/substr-str_replace.php">substr-str_replace.php</a></li>
                 </ul>
                 Week 8
                 <ul>
@@ -108,9 +111,14 @@
                 <div class="row">
                     <ul style="font-size:90%; text-align:center">
                         <li>
-                            &copy; Copyright 2020 - <?php
-                            echo date('Y');
-                            ?>
+                            Copyright &copy; <?php
+                            $startDate = 2020;
+                            $currentDate = date('Y');
+                            if($startDate == $currentDate) {
+                                echo $currentDate;
+                            } else {
+                                echo ''.$startDate.' - '.$currentDate.'';
+                            } ?>
                         </li>
                         <li>All Rights Reserved</li>
                         <li><a href="">Terms of Use</a></li>

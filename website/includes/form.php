@@ -25,37 +25,43 @@
                 <!-- If the end user has typed a phone number, use that phone number -->
                 <span><?php echo $phoneErr; ?></span>
 
-        <label>Gender</label>
+        <label>Sign-Up for Newsletter?</label>
             <ul>
-                <li><input type="radio" name="gender" value="male"
-                    <?php if (isset($_POST['gender']) && $_POST['gender'] == 'male') echo 'checked="checked"'; ?>
-                        >Male</li>
-                <li><input type="radio" name="gender" value="Female"
-                    <?php if (isset($_POST['gender']) && $_POST['gender'] == 'male') echo 'checked="checked"'; ?>
-                        >Female</li>
+                <li><input type="radio" name="newsletter" value="Yes"
+                    <?php if (isset($_POST['newsletter']) && $_POST['newsletter'] == 'Yes') echo 'checked="checked"'; ?>
+                        >Yes</li>
+                <li><input type="radio" name="newsletter" value="No"
+                    <?php if (isset($_POST['newsletter']) && $_POST['newsletter'] == 'No') echo 'checked="checked"'; ?>
+                        >No</li>
             </ul>
-                <span><?php echo $genderErr; ?></span>
+                <span><?php echo $newsletterErr; ?></span>
 
-        <label>Favorite Wines</label>
+        <label>Favorite Donuts</label>
             <ul>
                 <!-- Radio buttons and check boxes are very similar -->
-                <li><input type="checkbox" name="wines[]" value="Cabernet"
-                    <?php if (isset($_POST['wines']) && $_POST['wines'] == 'Cabernet') echo 'checked="checked"'; ?>
-                        >Cabernet</li>
-                <li><input type="checkbox" name="wines[]" value="Merlot"
-                    <?php if (isset($_POST['wines']) && $_POST['wines'] == 'Merlot') echo 'checked="checked"'; ?>
-                        >Merlot</li>
-                <li><input type="checkbox" name="wines[]" value="Syrah"
-                    <?php if (isset($_POST['wines']) && $_POST['wines'] == 'Syrah') echo 'checked="checked"'; ?>
-                        >Syrah</li>
-                <li><input type="checkbox" name="wines[]" value="Malbec"
-                    <?php if (isset($_POST['wines']) && $_POST['wines'] == 'Malbec') echo 'checked="checked"'; ?>
-                        >Malbec</li>
-                <li><input type="checkbox" name="wines[]" value="Zinfandel"
-                    <?php if (isset($_POST['wines']) && $_POST['wines'] == 'Zinfandel') echo 'checked="checked"'; ?>
-                        >Zinfandel</li>
+                <li><input type="checkbox" name="donuts[]" value="Plain"
+                    <?php if (isset($_POST['donuts']) && $_POST['donuts'] == 'Plain') echo 'checked="checked"'; ?>
+                        >Plain</li>
+                <li><input type="checkbox" name="donuts[]" value="Sugar"
+                    <?php if (isset($_POST['donuts']) && $_POST['donuts'] == 'Sugar') echo 'checked="checked"'; ?>
+                        >Sugar</li>
+                <li><input type="checkbox" name="donuts[]" value="Glazed"
+                    <?php if (isset($_POST['donuts']) && $_POST['donuts'] == 'Glazed') echo 'checked="checked"'; ?>
+                        >Glazed</li>
+                <li><input type="checkbox" name="donuts[]" value="Chocolate"
+                    <?php if (isset($_POST['donuts']) && $_POST['donuts'] == 'Chocolate') echo 'checked="checked"'; ?>
+                        >Chocolate</li>
+                <li><input type="checkbox" name="donuts[]" value="Powdered"
+                    <?php if (isset($_POST['donuts']) && $_POST['donuts'] == 'Powdered') echo 'checked="checked"'; ?>
+                        >Powdered</li>
+                <li><input type="checkbox" name="donuts[]" value="Cream-Filled"
+                    <?php if (isset($_POST['donuts']) && $_POST['donuts'] == 'Cream-Filled') echo 'checked="checked"'; ?>
+                        >Cream-Filled</li>
+                <li><input type="checkbox" name="donuts[]" value="Apple Fritter"
+                    <?php if (isset($_POST['donuts']) && $_POST['donuts'] == 'Apple Fritter') echo 'checked="checked"'; ?>
+                        >Apple Fritter</li>
             </ul>
-                <span><?php echo $winesErr; ?></span>
+                <span><?php echo $donutsErr; ?></span>
 
         <label>Comments</label>
             <textarea name="comments"><?php if (isset($_POST['comments'])) echo htmlspecialchars($_POST['comments']); ?></textarea>
