@@ -8,3 +8,4 @@ practice.php
 .gitattributes.txt
 test_mamp.php
 images
+credentials.php
