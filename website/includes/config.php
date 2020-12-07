@@ -1,5 +1,10 @@
 <?php
 
+ob_start(); // Prevents header errors before reading the whole page
+define('DEBUG', 'TRUE'); // Displays errors
+
+include('credentials.php');
+
 /* ========================================
 NAVIGATION PHP
 =========================================== */
@@ -18,7 +23,7 @@ switch(THIS_PAGE) {
 
     case 'about.php' : 
         $title = 'About';
-        $mainHeadline = 'Welcome to the About Page!';
+        $mainHeadline = 'About This Site';
         $center = 'center';
         $body = 'about inner';
     break;
@@ -30,28 +35,35 @@ switch(THIS_PAGE) {
         $body = 'daily inner';
     break;
 
-    case 'customers.php' : 
-        $title = 'Customers';
-        $mainHeadline = 'Welcome, Customers!';
+    case 'games.php' : 
+        $title = 'Games';
+        $mainHeadline = 'Indie Games Catalog';
         $center = 'center';
-        $body = 'customers inner';
+        $body = 'games inner';
+    break;
+
+    case 'games-view.php' : 
+        $title = 'Game Details';
+        // $mainHeadline = '';
+        $center = 'center';
+        $body = 'games-view inner';
     break;
 
     case 'contact.php' : 
         $title = 'Contact';
-        $mainHeadline = 'Contact Us!';
+        $mainHeadline = 'Contact Us';
         $body = 'contact inner';
     break;
 
     case 'thx.php' : 
         $title = 'Thank you!';
-        $mainHeadline = 'Thank you for filling out the form!';
+        $mainHeadline = 'Thank you for your submission!';
         $body = 'contact inner';
     break;
 
     case 'gallery.php' : 
         $title = 'Gallery';
-        $mainHeadline = 'Welcome to the Candidates Gallery Page!';
+        $mainHeadline = 'Screenshot Gallery';
         $body = 'gallery inner';
     break;
 
@@ -61,7 +73,7 @@ switch(THIS_PAGE) {
 $nav['index.php'] = 'Home';
 $nav['about.php'] = 'About';
 $nav['daily.php'] = 'Daily';
-$nav['customers.php'] = 'Customers';
+$nav['games.php'] = 'Games';
 $nav['contact.php'] = 'Contact';
 $nav['gallery.php'] = 'Gallery';
 
@@ -103,43 +115,51 @@ function randImages($photos) {
 
 
 /* ========================================
-CANDIDATES LIST PHP
+SCREENSHOT LIST PHP
 =========================================== */
 
-$people['Donald_Trump'] = 'trump_President from NY';
-$people['Joe_Biden'] = 'biden_Vice President from PA';
-$people['Hilary_Clinton'] = 'clint_Secretary from NY';
-$people['Bernie_Sanders'] = 'sande_Senator from VT';
-$people['Elizabeth_Warren'] = 'warre_Senator from MA';
-$people['Kamala_Harris'] = 'harri_Senator from CA';
-$people['Corey_Booker'] = 'booke_Senator from NJ';
-$people['Andrew_Yang'] = 'ayang_Entrepreneur from NY';
-$people['Pete_Buttigieg'] = 'butti_Mayor from IN';
-$people['Amy_Klobuchar'] = 'klobu_Senator from MN';
-$people['Julian_Castro'] = 'castr_Housing/Urban from TX';
+$screenshot['Baston'] = 'basti_Supergiant Games';
+$screenshot['Child of Light'] = 'child_Ubisoft Montreal';
+$screenshot['Dead Cells'] = 'deadc_Motion Twin, Evil Empire';
+$screenshot['Gris'] = 'grisg_Nomada Studio';
+$screenshot['Hollow Knight'] = 'hollo_Team Cherry';
+$screenshot['Indivisible'] = 'indiv_Lab Zero Games';
+$screenshot['Journey'] = 'journ_Thatgamecompany, Santa Monica Studio';
+$screenshot['Little Nightmares'] = 'littl_Tarsier Studios';
+$screenshot['Ori and the Blind Forest'] = 'oribl_Moon Studios';
+$screenshot['The Pathless'] = 'pathl_Giant Squid';
+$screenshot['Sky: Children of the Light'] = 'skych_Thatgamecompany';
+$screenshot['Spiritfarer'] = 'spiri_Thunder Lotus Games';
+$screenshot['The Messenger'] = 'theme_Sabotage Studio';
+$screenshot['Ultimate Chicken Horse'] = 'ultim_Clever Endeavour Games';
+$screenshot['Velocity 2X'] = 'veloc_Future Lab';
 
 /* ========================================
-RANDOM IMAGE (CANDIDATES)
+RANDOM IMAGE (SCREENSHOTS)
 =========================================== */
 
 // photos array for the randImages() function
-$candidates[0] = 'trump';
-$candidates[1] = 'biden';
-$candidates[2] = 'clint';
-$candidates[3] = 'sande';
-$candidates[4] = 'warre';
-$candidates[5] = 'harri';
-$candidates[6] = 'booke';
-$candidates[7] = 'ayang';
-$candidates[8] = 'butti';
-$candidates[9] = 'klobu';
-$candidates[10] = 'castr';
+$featured[0] = 'basti';
+$featured[1] = 'child';
+$featured[2] = 'deadc';
+$featured[3] = 'grisg';
+$featured[4] = 'hollo';
+$featured[5] = 'indiv';
+$featured[6] = 'journ';
+$featured[7] = 'littl';
+$featured[8] = 'oribl';
+$featured[9] = 'pathl';
+$featured[10] = 'skych';
+$featured[11] = 'spiri';
+$featured[12] = 'theme';
+$featured[13] = 'ultim';
+$featured[14] = 'veloc';
 
 // displays a random images from the specified (perameter) collection
-function randImages2($candidates) {
-    $i = rand(0, count($candidates)-1);
-    $selectedImages = 'images/'.$candidates[$i].'.jpg';
-    echo '<img src="'.$selectedImages.'" alt="'.$i.'" style="width:300px">';
+function randImages2($featured) {
+    $i = rand(0, count($featured)-1);
+    $selectedImages = 'images/'.$featured[$i].'.jpg';
+    echo '<a href="'.$selectedImages.'" target="_blank"><img src="'.$selectedImages.'" alt="'.$i.'" style="width:300px; border: 1px solid black; box-shadow: 0 10px 10px -10px rgb(129, 129, 129)"></a>';
 } // end function
 
 
@@ -152,7 +172,7 @@ $lastName = '';
 $email = '';
 $phone = '';
 $newsletter = '';
-$donuts = '';
+$platforms = '';
 $privacy = '';
 $comments = '';
 
@@ -161,7 +181,7 @@ $lastNameErr = '';
 $emailErr = '';
 $phoneErr = '';
 $newsletterErr = '';
-$donutsErr = '';
+$platformsErr = '';
 $privacyErr = '';
 $commentsErr = '';
 
@@ -195,10 +215,10 @@ if (empty($_POST['newsletter'])) {
     $newsletter = $_POST['newsletter'];
 }
 
-if (empty($_POST['donuts'])) {
-    $donutsErr = 'You got a problem with donuts?';
+if (empty($_POST['platforms'])) {
+    $platformsErr = 'Please select at least one';
 } else {
-    $donuts = $_POST['donuts'];
+    $platforms = $_POST['platforms'];
 }
 
 if (empty($_POST['comments'])) {
@@ -214,13 +234,13 @@ if (empty($_POST['privacy'])) {
 }
 
 // if the end user checks the checkboxes, we want to know
-// implode the array of donuts - create a function for it
+// implode the array of platforms - create a function for it
 
-function myDonuts() {
+function myPlatforms() {
     $myReturn = '';
 
-    if (!empty($_POST['donuts'])) {
-        $myReturn = implode(', ', $_POST['donuts']);
+    if (!empty($_POST['platforms'])) {
+        $myReturn = implode(', ', $_POST['platforms']);
 
 
     } return $myReturn; // end if
@@ -240,7 +260,7 @@ if (empty($_POST['phone'])) {  // if empty, type in your number
 if (isset($_POST['firstName'],
             $_POST['lastName'],
             $_POST['newsletter'],
-            $_POST['donuts'],
+            $_POST['platforms'],
             $_POST['comments'],
             $_POST['phone'],
             $_POST['privacy'])) {
@@ -250,7 +270,7 @@ if (isset($_POST['firstName'],
                 $body = ''.$firstName.' has filled out your contact form! '.PHP_EOL.'';
                 $body .= 'Email: '.$email.' '.PHP_EOL.'';
                 $body .= 'Phone number: '.$phone.' '.PHP_EOL.'';
-                $body .= 'Favorite donuts: '.myDonuts().' '.PHP_EOL.'';
+                $body .= 'Favorite platforms: '.myPlatforms().' '.PHP_EOL.'';
                 $body .= 'Newsletter: '.$newsletter.' '.PHP_EOL.'';
                 $body .= 'Comments: '.$comments.'';
 
@@ -273,16 +293,16 @@ if (isset($_POST['firstName'],
 
 
 
-// // BOTTOM ONLY - RESERVED
-// function myError($myFile, $myLine, $errorMsg) {
-//     if(defined('DEBUG') && DEBUG) {
-//         echo 'Error in file: <b>'.$myFile.'</b> on line: <b>'.$myLine.'</b>';
-//         echo 'Error message: <b>'.$errorMsg.'</b>';
-//         die();
-//     } else {
-//         echo ' Houston, we have a problem!';
-//         die();
-//     }
-// }
+// BOTTOM ONLY - RESERVED
+function myError($myFile, $myLine, $errorMsg) {
+    if(defined('DEBUG') && DEBUG) {
+        echo 'Error in file: <b>'.$myFile.'</b> on line: <b>'.$myLine.'</b>';
+        echo 'Error message: <b>'.$errorMsg.'</b>';
+        die();
+    } else {
+        echo ' Houston, we have a problem!';
+        die();
+    }
+}
 
 ?>

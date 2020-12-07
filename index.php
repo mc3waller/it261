@@ -21,8 +21,8 @@
                 <li><a href="week4/troubleshoot.php">Troubleshoot - 4</a></li>
                 <li><a href="week5/trip-calculator.php">Calculator - 5</a></li>
                 <li><a href="website/contact.php">Email - 6</a></li>
-                <li><a href="">Gallery - 7</a></li>
-                <li><a href="">Database - 8</a></li>
+                <li><a href="website/gallery.php">Gallery - 7</a></li>
+                <li><a href="website/games.php">Database - 8</a></li>
                 <!-- <li><a href="">Database - 8</a></li> -->
             </ul>
         </nav>
@@ -92,6 +92,18 @@
                     <li><a href="week7/substr-str_replace.php">substr-str_replace.php</a></li>
                 </ul>
                 Week 8
+                <ul>
+                    <li><a href="week8/people.php">people.php</a></li>
+                </ul>
+                Week 9
+                <ul>
+                    <li><a href=""></a><em>Coming soon...</em></li>
+                </ul>
+                Week 10
+                <ul>
+                    <li><a href=""></a><em>Coming soon...</em></li>
+                </ul>
+                Week 11
                 <ul>
                     <li><a href=""></a><em>Coming soon...</em></li>
                 </ul>

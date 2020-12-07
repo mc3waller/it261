@@ -9,14 +9,19 @@ include('includes/header.php');
     <main>
         <h1><?php echo $mainHeadline; ?></h1>
 
-        <table class="candidates">
-        <?php foreach($people as $fullName => $image) : ?>
+        <table class="screenshots">
+        <?php foreach($screenshot as $title => $image) : ?>
+            <tr>
+                <th></th>
+                <th>Game</th>
+                <th>Developer</th>
+            </tr>
             <tr>
                 <td>
-                    <img src="images/<?php echo substr($image, 0, 5) ?>.jpg" alt="<?php echo $fullName; ?>">
+                    <a href="images/<?php echo substr($image, 0, 5) ?>.jpg" target="_blank"><img src="images/<?php echo substr($image, 0, 5) ?>.jpg" alt="<?php echo $title; ?>" style="width:300px; border: 1px solid black; box-shadow: 0 10px 10px -10px rgb(129, 129, 129)"></a>
                 </td>
                 <td>
-                    <?php echo str_replace('_', ' ', $fullName); ?>
+                    <?php echo str_replace('_', ' ', $title); ?>
                 </td>
                 <td>
                     <?php echo substr($image, 6); ?>
@@ -26,10 +31,10 @@ include('includes/header.php');
         </table>
     </main>
 
-    <aside>
-        <h3>This is my headline 3 ont he gallery page</h3>
-        <?php echo randImages2($candidates); ?>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa recusandae alias dolores commodi ab nemo suscipit assumenda eligendi, impedit doloremque quasi eum quo beatae cupiditate consectetur corporis eos dicta officia?</p>
+    <aside id="gallery-aside">
+        <h3>Random Featured Image</h3>
+        <?php echo randImages2($featured); ?>
+        <p>Random images from games in our <a href="games.php">catalog</a>, plus some other honorable mentions!</p>
     </aside>
     
 
