@@ -13,7 +13,7 @@
         <label>Last Name</label>
             <input type="text" name="LastName" value="<?php if(isset($_POST['LastName'])) echo $_POST['LastName']; ?>">
         
-        <label>UserName</label>
+        <label>User Name</label>
             <input type="text" name="UserName" value="<?php if(isset($_POST['UserName'])) echo $_POST['UserName']; ?>">
 
         <label>Email</label>

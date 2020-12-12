@@ -24,3 +24,5 @@ include('includes/header.php');
         <button type="button" onclick="window.location.href = '<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>' ">RESET</button>
     </fieldset>
 </form>
+
+<p class="center">Haven't registered? <a href="register.php">Register here!</a></p>

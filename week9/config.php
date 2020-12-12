@@ -3,7 +3,7 @@
 // Config file that links to credentials.php
 
 ob_start(); // Prevents header errors before reading the whole page
-define('DEBUG', 'FALSE'); // Displays errors
+define('DEBUG', 'TRUE'); // Displays errors
 
 include('credentials.php');
 
