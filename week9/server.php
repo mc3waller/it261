@@ -77,7 +77,7 @@ if(isset($_POST['reg_user'])) {
         $_SESSION['UserName'] = $UserName;
         $_SESSION['success'] = $success;
 
-        header('Location: login.php');
+        header('Location:login.php');
     } // End count
 
 } // End isset
@@ -106,7 +106,7 @@ if(isset($_POST['login_user'])) {
             $_SESSION['UserName'] = $UserName;
             $_SESSION['success'] = $success;
 
-            header('Location: index.php');
+            header('Location:index.php');
         } else {
             array_push($errors, 'Wrong username/password combination');
         }
