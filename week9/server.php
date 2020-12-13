@@ -71,16 +71,20 @@ if(isset($_POST['reg_user'])) {
         $Password = md5($Password_1);
 
         $query = "INSERT INTO Users (FirstName, LastName, UserName, Email, Password) VALUES ('$FirstName', '$LastName', '$UserName', '$Email', '$Password')";
-
         mysqli_query($db, $query);
 
         $_SESSION['UserName'] = $UserName;
         $_SESSION['success'] = $success;
 
         header('Location: login.php');
+
     } // End count
 
+
 } // End isset
+
+
+
 
 if(isset($_POST['login_user'])) {
     $UserName = mysqli_real_escape_string($db, $_POST['UserName']);
@@ -107,12 +111,14 @@ if(isset($_POST['login_user'])) {
             $_SESSION['success'] = $success;
 
             header('Location: index.php');
+
         } else {
-            array_push($errors, 'Wrong username/password combination');
+            array_push($errors, '<p>Wrong username/password combination</p>');
         }
 
     } // End count
 
-} // End isset
 
-?>
+
+
+} // End isset

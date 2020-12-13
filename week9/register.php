@@ -1,6 +1,9 @@
 <?php // Registration form
     include('server.php');
     include('includes/header.php');
+
+
+    
 ?>
 
 <h1>Register Today!</h1>

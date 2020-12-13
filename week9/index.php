@@ -2,7 +2,7 @@
 // In orde to view this page, a user must have registered and logged in; otherwise, they must be directed to do so
 
 session_start();
-
+// include('config.php');
 if(!isset($_SESSION['UserName'])) {
     $_SESSION['msg'] = 'You must log in first';
     header('Location: login.php');
@@ -13,6 +13,7 @@ if(isset($_GET['logout'])) {
     unset($_SESSION['UserName']);
     header('Location: login.php');
 }
+
 
 include('includes/header.php');
 ?>
