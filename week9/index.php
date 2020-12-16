@@ -44,3 +44,9 @@ if(isset($_SESSION['success]'])) : ?>
         <p><a href="index.php?logout='1'">Log out!</a></p>
 </div>
 <?php endif ?>
+
+<?php
+
+include('includes/footer.php');
+
+?>

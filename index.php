@@ -97,15 +97,7 @@
                 </ul>
                 Week 9
                 <ul>
-                    <li><a href=""></a><em>Coming soon...</em></li>
-                </ul>
-                Week 10
-                <ul>
-                    <li><a href=""></a><em>Coming soon...</em></li>
-                </ul>
-                Week 11
-                <ul>
-                    <li><a href=""></a><em>Coming soon...</em></li>
+                    <li><a href="week9/login.php">login.php</a></li>
                 </ul>
             </div>
 
@@ -114,7 +106,7 @@
                 <br>
                 <p>The final assignment will link to a different website, located inside my IT261 folder.</p>
                 <br>
-                <a href="">Click here</a> to view the assignment.
+                <a href="final-project/login.php">Click here</a> to view the assignment.
             </div>
         </div> <!-- end of wrapper -->
 

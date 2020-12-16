@@ -30,3 +30,9 @@ include('includes/header.php');
 </form>
 
 <p class="center">Haven't registered? <a href="register.php">Register here!</a></p>
+
+<?php
+
+include('includes/footer.php');
+
+?>

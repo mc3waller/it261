@@ -1,0 +1,353 @@
+/* ========================================
+GENERAL CSS
+=========================================== */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(221, 221, 221);
+}
+
+body {
+    background-image: url('../images/honeycomb1.jpg');
+}
+
+.active {
+    color: white;
+}
+
+/* .home {
+    background: rgb(189, 189, 189);
+}
+
+.about {
+    background: rgb(189, 189, 189);
+}
+
+.daily {
+    background: rgb(189, 189, 189);
+}
+
+.games {
+    background: rgb(189, 189, 189);
+}
+
+.games-view {
+    background: rgb(189, 189, 189);
+}
+
+.contact {
+    background: rgb(189, 189, 189);
+}
+
+.gallery {
+    background: rgb(189, 189, 189);
+} */
+
+.center {
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+    background: #202020;
+    overflow: hidden;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    box-shadow: 0 10px 10px -10px rgb(0, 0, 0);
+
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.inner-header {
+    width: 940px;
+    margin: 20px auto;
+}
+
+#logo {
+    width: 150px;
+    float: left;
+}
+
+#site-title {
+    margin-top: 33px;
+    margin-left: 20px;
+    float: left;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgb(61, 61, 61);
+}
+
+nav ul {
+    float: right;
+    margin-top: 40px;
+}
+
+nav li {
+    float: left;
+    margin-left: 15px;
+    list-style-type: none;
+}
+
+nav a {
+    color: rgb(104, 144, 255);
+    text-decoration: none;
+}
+
+.wrapper {
+    clear: both;
+    width: 990px;
+    margin: 0 auto;
+    padding: 20px 20px 0px 20px;
+    border: 2px solid black;
+    border-radius: 4px;
+
+    -webkit-box-shadow: 0 6px 6px -6px black;
+    -moz-box-shadow: 0 6px 6px -6px black;
+    box-shadow: 0 6px 6px -6px black;
+
+    background-color: rgb(37, 37, 37);
+
+    margin-bottom: 10px;
+}
+
+main {
+    width: 540px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+aside {
+    width: 380px;
+    margin-top: 15px;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.gallery-aside {
+    text-align: center;
+    line-height: 1.5em;
+}
+
+aside img {
+    margin: 10px auto 15px auto;
+}
+
+footer {
+    width: 940px;
+    margin: 0 auto;
+    height: 50px;
+    line-height: 50px;
+    border-top: 1px dotted rgb(98, 98, 98);
+    clear: both;
+    text-align: center;
+}
+
+/* footer li {
+    float: left;
+    margin-right: 30px;
+    list-style-type: none;
+} */
+
+img {
+    max-width: 100%;
+    display: block;;
+}
+
+.content-img {
+    border: 1px solid black;
+    box-shadow: 0 10px 10px -10px rgb(0, 0, 0);
+}
+
+/* Random home page image */
+.wrapper img {
+    margin: 0 auto;
+}
+
+blockquote {
+    font-size: 1.4em;
+    margin: 20px 100px;
+}
+
+/* .home h1 {
+    font-size: 3em;
+    font-weight: 200;
+    margin-bottom: 12px;
+} */
+
+h1, h2, h3 {
+    font-weight: 200;
+    margin-bottom: 9px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 1px 1px 4px rgb(22, 22, 22);
+}
+
+aside h2 {
+    color: hsl(325, 50%, 47%);
+    text-align: center;
+}
+
+.content-post h2 {
+    color: hsl(325, 50%, 47%);
+}
+
+p {
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgb(22, 22, 22);
+}
+
+a {
+    color: rgb(80, 111, 197);
+    text-decoration: none;
+}
+
+a:hover {
+    color: hsl(0, 50%, 47%);
+}
+
+hr {
+    margin: 20px 0px 20px 0px;
+    width: 600px;
+    margin-left: 173px;
+}
+
+.content-post {
+    width: 600px;
+    margin: 0 auto;
+}
+
+table {
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.screenshots td:nth-child(1),
+.screenshots td:nth-child(2) {
+    width: 150px;
+}
+
+.screenshots td:nth-child(2) {
+    padding-left: 20px;
+}
+
+
+/* ========================================
+FORM CSS
+=========================================== */
+
+form {
+    max-width: 580px;
+    margin-bottom: 20px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+input[type=text],
+input[type=email],
+input[type=phone],
+input[type=password],
+textarea {
+    width: 100%;
+    height: 30px;
+    color: black;
+    background-color: silver;
+}
+
+textarea {
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    color: rgb(126, 126, 126);
+    padding: 10px 15px 10px 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(221, 221, 221);
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.box {
+    width: 600px;
+    margin: 20px auto;
+    background: beige;
+    padding: 20px;
+}
+
+select {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+.formError {
+    display: block;
+    color: brown;
+    font-style: italic;
+}
+
+input#submit {
+    border-radius: 1px;
+    padding: 5px 10px 5px 10px;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 18px;
+    background-color: silver;
+    font-size: 1em;
+}
+
+/* ========================================
+LOGIN/REG FORM CSS
+=========================================== */
+
+#login-form {
+    max-width: 580px;
+    margin: 0 auto 20px auto;
+}
+
+#login-form input {
+    display: block;
+    height: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#login-form fieldset {
+    padding: 10px;
+}
+
+#register-form {
+    max-width: 580px;
+    margin: 0 auto 20px auto;
+}
+
+#register-form input {
+    display: block;
+    height: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#register-form fieldset {
+    padding: 10px;
+}
