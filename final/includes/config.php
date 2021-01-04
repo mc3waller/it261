@@ -297,7 +297,7 @@ if (isset($_POST['firstName'],
                 $body .= 'Comments: '.$comments.'';
 
                 $headers = array(
-                    'From' => 'no-reply@indiestorm.com',
+                    'From' => 'no-reply@malwal2.dreamhosters.com',
                     'Reply-to' => ' '.$email.''
                 );
 

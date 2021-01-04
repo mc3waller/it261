@@ -106,7 +106,7 @@
                 <br>
                 <p>The final assignment will link to a different website, located inside my IT261 folder.</p>
                 <br>
-                <a href="final-project/login.php">Click here</a> to view the assignment.
+                <a href="final/login.php">Click here</a> to view the assignment.
             </div>
         </div> <!-- end of wrapper -->
 
